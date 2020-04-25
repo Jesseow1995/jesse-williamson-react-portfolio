@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 import PortfolioItem from "./portfolio-item";
 
@@ -9,15 +10,11 @@ export default class PortfolioContainer extends Component {
     this.state = {
       pageTitle: "Welcome to my portfolio",
       isLoading: false,
-      data: [
-        { title: "JavaScript", category: "Frontend" },
-        { title: "Python", category: "Backend" },
-        { title: "C++", category: "Backend" },
-        { title: "React", category: "Frontend" }
-      ]
+      data: []
     };
 
     this.handleFilter = this.handleFilter.bind(this);
+    this.getPortfolioItems = this.getPortfolioItems.bind(this);
   }
 
   handleFilter(filter) {
@@ -28,26 +25,51 @@ export default class PortfolioContainer extends Component {
     });
   }
 
+  getPortfolioItems() {
+    axios
+      .get("https://jesse.devcamp.space/portfolio/portfolio_items")
+      .then(response => {
+        console.log(response);
+        this.setState({
+          data: response.data.portfolio_items
+        })
+      })
+      .catch(error => {
+        console.log(error);
+      })
+  }
+
   portfolioItems() {
     return this.state.data.map(item => {
-      return <PortfolioItem title={item.title} url={"google.com"} />;
+      return <PortfolioItem
+        key={item.id}
+        item={item} />;
     });
   }
 
+  componentDidMount() {
+    this.getPortfolioItems();
+  }
+
   render() {
+
     if (this.state.isLoading) {
       return <div>Loading...</div>;
     }
+
 
     return (
       <div>
         <h2>{this.state.pageTitle}</h2>
 
-        <button onClick={() => this.handleFilter("Frontend")}>
-          Frontend
+        <button onClick={() => this.handleFilter("Retail")}>
+          Retail
         </button>
-        <button onClick={() => this.handleFilter("Backend")}>
-          Backend
+        <button onClick={() => this.handleFilter("Healthcare")}>
+          Healthcare
+        </button>
+        <button onClick={() => this.handleFilter("Education")}>
+          Education
         </button>
         {this.portfolioItems()}
       </div>
