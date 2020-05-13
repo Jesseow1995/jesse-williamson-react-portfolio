@@ -11,13 +11,13 @@ export default class PortfolioManager extends Component {
             portfolioItems: []
         };
         this.handleSuccessfulFormSubmission = this.handleSuccessfulFormSubmission.bind(this);
-        this.handleFormSubmissionError = this.handleFormSubmissionError.bind(this)
+        this.handleFormSubmissionError = this.handleFormSubmissionError.bind(this);
     }
 
     handleSuccessfulFormSubmission(portfolioItem) {
-        // TODO
-        //update the portfolio items state
-        // add the portfolio to the list
+       this.setState({
+           portfolioItems: [portfolioItem].concat(this.state.portfolioItems)
+       })
     }
 
     handleFormSubmissionError(Error) {
