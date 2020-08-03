@@ -1,9 +1,46 @@
 import React from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import contactImage from "../../../static/assets/images/auth/manchas.jpg"
 
-export default function() { 
-     return (
-       <div>
-         Contact Me
-       </div>
-     )
-   }
+
+export default function () {
+  return (
+    <div className="content-page-wrapper">
+      <div
+        className="left-column"
+        syle={{
+          background: "url(" + contactImage + ") no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center"
+        }}
+      />
+
+
+
+      <div className="right-column">
+        <div className="contact-bullet-points">
+
+          <div className="bullet-point-group">
+            <div className="icon">
+              <FontAwesomeIcon icon="phone" />
+            </div>
+            <div className="text">555-555-555</div>
+          </div>
+
+          <div className="bullet-point-group">
+            <div className="icon">
+              <FontAwesomeIcon icon="envelope" />
+            </div>
+            <div className="text">myemail@email.com</div>
+          </div>
+          <div className="bullet-point-group">
+            <div className="icon">
+              <FontAwesomeIcon icon="map-marked-alt" />
+            </div>
+            <div className="text">Utah</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}

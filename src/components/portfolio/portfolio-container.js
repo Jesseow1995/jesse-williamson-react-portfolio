@@ -14,7 +14,6 @@ export default class PortfolioContainer extends Component {
     };
 
     this.handleFilter = this.handleFilter.bind(this);
-    this.getPortfolioItems = this.getPortfolioItems.bind(this);
   }
 
   handleFilter(filter) {
@@ -29,7 +28,6 @@ export default class PortfolioContainer extends Component {
     axios
       .get("https://jesse.devcamp.space/portfolio/portfolio_items")
       .then(response => {
-        console.log(response);
         this.setState({
           data: response.data.portfolio_items
         })
