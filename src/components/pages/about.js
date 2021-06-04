@@ -6,7 +6,7 @@ export default function () {
         <div className="content-page-wrapper">
             <div
                 className="left-column"
-                syle={{
+                style={{
                     background: "url(" + aboutImage + ") no-repeat",
                     backgroundSize: "cover",
                     backgroundPosition: "center"
@@ -16,15 +16,9 @@ export default function () {
             </div>
 
             <div className="right-column">
-                This needs to be some placeholder content that doesnt
-                really matter what it says.This needs to be some placeholder content that doesnt
-                really matter what it says.This needs to be some placeholder content that doesnt
-                really matter what it says.This needs to be some placeholder content that doesnt
-                really matter what it says.This needs to be some placeholder content that doesnt
-                really matter what it says.This needs to be some placeholder content that doesnt
-                really matter what it says.This needs to be some placeholder content that doesnt
-                really matter what it says.This needs to be some placeholder content that doesnt
-                really matter what it says.
+                I am 25 years old. I enjoy reading books, playing video games, and
+                going out with my family. My wife is expecting our first child. We
+                also have a dog that is half Great Pyrenees and half Australian Shepard.
             </div>
         </div>
     )

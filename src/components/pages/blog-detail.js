@@ -1,4 +1,3 @@
-
 import React, { Component } from "react";
 import axios from "axios";
 import ReactHtmlParser from "react-html-parser";
@@ -18,7 +17,9 @@ export default class BlogDetail extends Component {
 
     this.handleEditClick = this.handleEditClick.bind(this);
     this.handleFeaturedImageDelete = this.handleFeaturedImageDelete.bind(this);
-    this.handleUpdateFormSubmission = this.handleUpdateFormSubmission.bind(this);
+    this.handleUpdateFormSubmission = this.handleUpdateFormSubmission.bind(
+      this
+    );
   }
 
   handleUpdateFormSubmission(blog) {

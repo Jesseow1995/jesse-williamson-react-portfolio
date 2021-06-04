@@ -8,7 +8,7 @@ export default function () {
     <div className="content-page-wrapper">
       <div
         className="left-column"
-        syle={{
+        style={{
           background: "url(" + contactImage + ") no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center"
