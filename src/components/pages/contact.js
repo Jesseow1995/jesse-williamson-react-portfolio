@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import contactImage from "../../../static/assets/images/auth/manchas.jpg"
+import contactImage from "../../../static/assets/images/20210325_130417.jpg"
 
 
 export default function () {
@@ -24,20 +24,20 @@ export default function () {
             <div className="icon">
               <FontAwesomeIcon icon="phone" />
             </div>
-            <div className="text">555-555-555</div>
+            <div className="text">360-550-7246</div>
           </div>
 
           <div className="bullet-point-group">
             <div className="icon">
               <FontAwesomeIcon icon="envelope" />
             </div>
-            <div className="text">myemail@email.com</div>
+            <div className="text">jesseowilliamson@gmail.com</div>
           </div>
           <div className="bullet-point-group">
             <div className="icon">
               <FontAwesomeIcon icon="map-marked-alt" />
             </div>
-            <div className="text">Utah</div>
+            <div className="text">Provo, Utah</div>
           </div>
         </div>
       </div>

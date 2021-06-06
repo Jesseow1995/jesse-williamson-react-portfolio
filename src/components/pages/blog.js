@@ -90,7 +90,7 @@ class Blog extends Component {
 
     axios
       .get(
-        `https://github.com/Jesseow1995/blogAPI/blob/main/blogData.json`,
+        `https://jesse.devcamp.space/portfolio/portfolio_blogs`,
         {
           withCredentials: true
         }

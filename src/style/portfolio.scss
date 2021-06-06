@@ -1,7 +1,7 @@
 .portfolio-items-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
-
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    
     .portfolio-item-wrapper {
         position: relative;
 
@@ -21,19 +21,20 @@
             justify-content: center;
             align-items: center;
             height: 100%;
+            width: 100%;
             text-align: center;
-            padding-left: 100px;
-            padding-right: 100px;
+            
 
             .subtitle {
                 transition: 1s ease-in-out;
                 color: transparent;
+        
 
             }
         }
 
         .img-text-wrapper:hover .subtitle {
-            color: darkblue; 
+            color: white; 
             font-weight: 500;
         }
     

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import loginImage from "../../../static/assets/images/auth/manchas.jpg"
+import loginImage from "../../../static/assets/images/auth/ManchasPuffin.jpg"
 import Login from "../auth/login";
 
 
@@ -26,13 +26,14 @@ export default class Auth extends Component {
                 <div
                     className="left-column"
                     style={{
-                        backgroundImage: `url(${loginImage})`
+                        backgroundImage: `url(${loginImage})`,
+
                     }}>
 
                 </div>
 
                 <div className="right-column">
-                    <Login 
+                    <Login
                         handleSuccessfulAuth={this.handleSuccessfulAuth}
                         handleUnsuccessfulAuth={this.handleUnsuccessfulAuth}
                     />

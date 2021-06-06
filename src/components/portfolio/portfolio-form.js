@@ -226,6 +226,7 @@ export default class PortfolioForm extends Component {
                         <option value="retail">Retail</option>
                         <option value="student">Student</option>
                         <option value="socialWork">Social Work</option>
+                        <option value="projects">Projects</option>
                     </select>
                 </div>
                 <div className="one-column">
@@ -248,15 +249,15 @@ export default class PortfolioForm extends Component {
                             </div>
                         </div>
                     ) : (
-                            <DropzoneComponent
-                                ref={this.thumbRef}
-                                config={this.componentConfig()}
-                                djsConfig={this.djsConfig()}
-                                eventHandlers={this.handleThumbDrop()}
-                            >
-                                <div className="dz-message">Thumbnail</div>
-                            </DropzoneComponent>
-                        )}
+                        <DropzoneComponent
+                            ref={this.thumbRef}
+                            config={this.componentConfig()}
+                            djsConfig={this.djsConfig()}
+                            eventHandlers={this.handleThumbDrop()}
+                        >
+                            <div className="dz-message">Thumbnail</div>
+                        </DropzoneComponent>
+                    )}
                     {this.state.banner_image_url && this.state.editMode ? (
                         <div className="portfolio-manager-image-wrapper">
                             <img src={this.state.banner_image_url} />
@@ -266,15 +267,15 @@ export default class PortfolioForm extends Component {
                             </div>
                         </div>
                     ) : (
-                            <DropzoneComponent
-                                ref={this.bannerRef}
-                                config={this.componentConfig()}
-                                djsConfig={this.djsConfig()}
-                                eventHandlers={this.handleBannerDrop()}
-                            >
-                                <div className="dz-message">Banner Image</div>
-                            </DropzoneComponent>
-                        )}
+                        <DropzoneComponent
+                            ref={this.bannerRef}
+                            config={this.componentConfig()}
+                            djsConfig={this.djsConfig()}
+                            eventHandlers={this.handleBannerDrop()}
+                        >
+                            <div className="dz-message">Banner Image</div>
+                        </DropzoneComponent>
+                    )}
                     {this.state.logo_url && this.state.editMode ? (
                         <div className="portfolio-manager-image-wrapper">
                             <img src={this.state.logo_url} />
@@ -284,15 +285,15 @@ export default class PortfolioForm extends Component {
                         </div>
                     ) : (
 
-                            <DropzoneComponent
-                                ref={this.logoRef}
-                                config={this.componentConfig()}
-                                djsConfig={this.djsConfig()}
-                                eventHandlers={this.handleLogoDrop()}
-                            >
-                                <div className="dz-message">Logo Image</div>
-                            </DropzoneComponent>
-                        )}
+                        <DropzoneComponent
+                            ref={this.logoRef}
+                            config={this.componentConfig()}
+                            djsConfig={this.djsConfig()}
+                            eventHandlers={this.handleLogoDrop()}
+                        >
+                            <div className="dz-message">Logo Image</div>
+                        </DropzoneComponent>
+                    )}
                 </div>
 
 
@@ -303,4 +304,4 @@ export default class PortfolioForm extends Component {
 
         )
     }
-}       
+}

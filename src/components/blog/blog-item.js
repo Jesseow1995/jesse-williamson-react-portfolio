@@ -23,6 +23,7 @@ const BlogItem = props => {
                         ...<Link to={`/b/${id}`}>Read more</Link>
                     </span>
                 }>{content}</Truncate>
+                <img src={featured_image_url}></img>
 
             </div>
         </div>

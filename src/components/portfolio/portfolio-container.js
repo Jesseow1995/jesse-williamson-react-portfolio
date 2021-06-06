@@ -17,6 +17,7 @@ export default class PortfolioContainer extends Component {
   }
 
   handleFilter(filter) {
+
     this.setState({
       data: this.state.data.filter(item => {
         return item.category === filter;
@@ -31,6 +32,7 @@ export default class PortfolioContainer extends Component {
         this.setState({
           data: response.data.portfolio_items
         })
+
       })
       .catch(error => {
         console.log(error);
@@ -66,6 +68,9 @@ export default class PortfolioContainer extends Component {
         </button>
         <button className="btn" onClick={() => this.handleFilter("Education")}>
           Education
+        </button>
+        <button className="btn" onClick={() => this.handleFilter("projects")}>
+          Projects
         </button>
 
         {this.portfolioItems()}

@@ -14,8 +14,8 @@ export default class BlogForm extends Component {
             blog_status: "",
             content: "",
             featured_image: "",
-            apiUrl: "https://jesse.devcamp.space/portfolio/portfolio_blogs",
-            apiAction: "post",
+            apiUrl: `https://jesse.devcamp.space/portfolio/portfolio_blogs`,
+            apiAction: "post"
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -82,12 +82,12 @@ export default class BlogForm extends Component {
     buildForm() {
         let formData = new FormData();
 
-        formData.append("portfolio_blog[title", this.state.title);
+        formData.append("portfolio_blog[title]", this.state.title);
         formData.append("portfolio_blog[blog_status]", this.state.blog_status)
         formData.append("portfolio_blog[content]", this.state.content)
 
         if (this.state.featured_image) {
-            formData.append("portfolio_blog[featured_image", this.state.featured_image)
+            formData.append("portfolio_blog[featured_image]", this.state.featured_image)
         };
 
         return formData;
@@ -115,7 +115,7 @@ export default class BlogForm extends Component {
                 if (this.props.editMode) {
                     this.props.handleUpdateFormSubmission(response.data.portfolio_blog)
                 } else {
-                    this.props.handleSuccessfullFormSubmission(response.data.portfolio_blog);
+                    this.props.handleSuccessfullNewBlogSubmission(response.data.portfolio_blog);
                 }
             }).catch(error => {
                 console.log("error for blog handleSubmit", error)
@@ -148,12 +148,13 @@ export default class BlogForm extends Component {
                     name="blog_status"
                     placeholder="Blog Status"
                     value={this.state.blog_status}
-                />
+                >
+                </input>
 
                 <div className="one-column">
                     <RichTextEditor
                         handleRichTextEditorChange={this.handleRichTextEditorChange}
-                        editMode={this.props.editmode}
+                        editMode={this.props.editmode || null}
                         contentToEdit={this.props.editMode && this.props.blog.content
                             ? this.props.blog.content
                             : null}
@@ -166,7 +167,8 @@ export default class BlogForm extends Component {
                             <img src={this.props.blog.featured_image_url} />
                             <div className="image-removal-link">
                                 <a onClick={() => this.deleteImage("featured_image")}>
-                                    Remove Image</a>
+                                    Remove Image
+                                    </a>
                             </div>
                         </div> :
                         <DropzoneComponent
