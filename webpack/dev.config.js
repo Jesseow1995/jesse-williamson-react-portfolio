@@ -15,7 +15,7 @@ module.exports = webpackMerge(webpackCommon, {
   devtool: 'inline-source-map',
   mode: 'development',
   output: {
-  
+
     path: path.resolve(__dirname, '../static/dist'),
 
     filename: '[name].js',
@@ -66,7 +66,7 @@ module.exports = webpackMerge(webpackCommon, {
     new HtmlWebpackPlugin({
       inject: true,
       template: path.resolve(__dirname, '../static/index.html'),
-      favicon: path.resolve(__dirname, '../static/favicon.ico')
+      //favicon: path.resolve(__dirname, '../static/favicon.ico')
     }),
     new HotModuleReplacementPlugin()
   ],
