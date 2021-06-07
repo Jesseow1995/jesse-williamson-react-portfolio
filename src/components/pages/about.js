@@ -19,6 +19,13 @@ export default function () {
                 I am 26 years old. I have one child and two dogs. I love to read fantasy and sci-fi novels, go mountain biking, and play video games
                 in my spare time. I love to spend time with my family and go on walks/hikes with them. I love to go on family road trips to new places
                 and to go visit family. I am from Washington State but I am currently living in Utah.
+
+                <div>
+                    <a href="https://www.linkedin.com/in/jesse-williamson-3a17b9213/">My linkedIn</a>
+                </div>
+                <div>
+                    <a href="https://github.com/Jesseow1995">My gitHub</a>
+                </div>
             </div>
         </div>
     )
